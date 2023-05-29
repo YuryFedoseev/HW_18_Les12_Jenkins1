@@ -42,3 +42,9 @@ test {
     useJUnitPlatform()
 }
 
+task web_test(type: Test) {
+    useJUnitPlatform {
+        include("Web")
+    }
+}
+
