@@ -1,7 +1,6 @@
 package guru.qa;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -11,7 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
-public class TestBase  {
+public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
@@ -22,20 +21,20 @@ public class TestBase  {
         Configuration.browserVersion = "100.0";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:option", Map.<String,Object>of(
-                "enableVNC",true,
+        capabilities.setCapability("selenoid:option", Map.<String, Object>of(
+                "enableVNC", true,
                 "enableVideo", true
-                ));
+        ));
         Configuration.browserCapabilities = capabilities;
     }
 
     @BeforeEach
-    void addListener(){
+    void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     @AfterEach
-    void addAttachments(){
+    void addAttachments() {
         demoqa.helpers.Attach.screenshotAs("Last screen");
         demoqa.helpers.Attach.pageSource();
         demoqa.helpers.Attach.browserConsoleLogs();
