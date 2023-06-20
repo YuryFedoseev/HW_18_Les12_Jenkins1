@@ -36,7 +36,7 @@ public class TestWebFormParametrize extends TestBase {
 
 
 
-    @ValueSource(strings = {"Music", "Sports", "Reading"})
+    @ValueSource(strings = {"Music", "Sports", "Reading1"})
     @DisplayName("Параметризованный тест выбора хобби на форме регистрации")
     @ParameterizedTest (name ="В форме заполнения выбор Хобби -  {0}")
     @Tag("Web")
