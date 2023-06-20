@@ -38,6 +38,11 @@ dependencies {
     )
 }
 
+tasks.withType(Test){
+    useJUnitPlatform()
+    systemProperties(System.getProperties())
+}
+
 tasks.withType(JavaCompile){
     options.encoding = 'UTF-8'
 }
