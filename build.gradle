@@ -45,9 +45,27 @@ test {
     useJUnitPlatform()
 }
 
-task web_test(type: Test) {
+task hobby_test(type: Test) {
     useJUnitPlatform {
-        include("Web")
+        include("Hobby")
+    }
+}
+
+task gender_test(type: Test) {
+    useJUnitPlatform {
+        include("Gender")
+    }
+}
+
+task city_test(type: Test) {
+    useJUnitPlatform {
+        include("City")
+    }
+}
+
+task name_test(type: Test) {
+    useJUnitPlatform {
+        include("Name")
     }
 }
 

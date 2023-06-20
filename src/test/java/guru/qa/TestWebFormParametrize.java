@@ -3,6 +3,7 @@ package guru.qa;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -39,7 +40,6 @@ public class TestWebFormParametrize extends TestBase {
     @ValueSource(strings = {"Music", "Sports", "Reading"})
     @DisplayName("Параметризованный тест выбора хобби на форме регистрации")
     @ParameterizedTest(name = "В форме заполнения выбор Хобби -  {0}")
-    @Tag("Web")
     @Tag("Hobby")
     void checkingWhetherTheHobbyFieldWithDifferentValuesTest(String testData) {
 
@@ -53,7 +53,6 @@ public class TestWebFormParametrize extends TestBase {
     @ValueSource(strings = {"Female", "Male", "Other"})
     @DisplayName("Параметризованный тест выбора пола на форме регистрации")
     @ParameterizedTest(name = "В форме заполнения параметризованный выбор Пола {0}")
-    @Tag("Web")
     @Tag("Gender")
     void checkingWhetherTheGenderFieldWithDifferentValuesTest(String testData) {
 
@@ -68,7 +67,7 @@ public class TestWebFormParametrize extends TestBase {
     @CsvFileSource(resources = "/testData/checkingWhetherTheCityFieldWithDifferentValuesTest.csv")
     @ParameterizedTest(name = "В форме заполнения параметризованный выбор страны -{0}  и города {1}")
     @DisplayName("Параметризованный тест выбора места локации на форме регистрации")
-    @Tag("Web")
+    @Tag("City")
     void checkingWhetherTheCityFieldWithDifferentValuesTest(String testData, String expectedText) {
 
         registrationPage
@@ -89,7 +88,7 @@ public class TestWebFormParametrize extends TestBase {
 
     @ParameterizedTest(name = "В форме заполнения параметризованный выбор Имени -{0}  и Фамилии- {1}")
     @DisplayName("Параметризованный тест выбора связки имен и фамилий на форме регистрации")
-    @Tag("Web")
+    @Tag("Name")
     void checkingWhetherTheNameAndLastNameFieldWithDifferentValuesTest(String testData, String expectedText) {
 
         registrationPage
