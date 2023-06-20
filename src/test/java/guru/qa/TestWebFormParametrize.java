@@ -40,6 +40,7 @@ public class TestWebFormParametrize extends TestBase {
     @DisplayName("Параметризованный тест выбора хобби на форме регистрации")
     @ParameterizedTest(name = "В форме заполнения выбор Хобби -  {0}")
     @Tag("Web")
+    @Tag("Hobby")
     void checkingWhetherTheHobbyFieldWithDifferentValuesTest(String testData) {
 
         registrationPage
@@ -53,6 +54,7 @@ public class TestWebFormParametrize extends TestBase {
     @DisplayName("Параметризованный тест выбора пола на форме регистрации")
     @ParameterizedTest(name = "В форме заполнения параметризованный выбор Пола {0}")
     @Tag("Web")
+    @Tag("Gender")
     void checkingWhetherTheGenderFieldWithDifferentValuesTest(String testData) {
 
         registrationPage
