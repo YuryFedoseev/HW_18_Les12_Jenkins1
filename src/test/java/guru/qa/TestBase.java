@@ -38,6 +38,6 @@ public class TestBase {
         demoqa.helpers.Attach.screenshotAs("Last screen");
         demoqa.helpers.Attach.pageSource();
         demoqa.helpers.Attach.browserConsoleLogs();
-        demoqa.helpers.Attach.addVideo();
+         demoqa.helpers.Attach.addVideo();
     }
 }
