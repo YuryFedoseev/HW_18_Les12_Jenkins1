@@ -35,9 +35,9 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        demoqa.helpers.Attach.screenshotAs("Last screen");
-        demoqa.helpers.Attach.pageSource();
-        demoqa.helpers.Attach.browserConsoleLogs();
-        demoqa.helpers.Attach.addVideo();
+        Attach.screenshotAs("Last screen");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
     }
 }
