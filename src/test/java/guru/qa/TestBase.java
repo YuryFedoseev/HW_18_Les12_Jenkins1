@@ -11,15 +11,17 @@ import java.util.Map;
 
 public class TestBase {
 
-    @Test
-    @Tag("browser")
-    void setBrowserName() {
-        String browserName = System.getProperty("browser");
-        Configuration.browser = browserName;
-    }
+
+
 
     @BeforeAll
     static void beforeAll() {
+        @Tag("browser")
+        void setBrowserName() {
+            String browserName = System.getProperty("browser");
+            Configuration.browser = browserName;
+        }
+
         Configuration.browserSize = "720x880";
         Configuration.baseUrl = "https://github.com/YuryFedoseev/HW_18_Les11_Allure";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
