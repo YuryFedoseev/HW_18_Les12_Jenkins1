@@ -16,7 +16,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
 
-        System.setProperty("browser","chrome")
+        System.setProperty("browser","chrome");
         String browserName = System.getProperty("browser");
         Configuration.browser = browserName;
 
