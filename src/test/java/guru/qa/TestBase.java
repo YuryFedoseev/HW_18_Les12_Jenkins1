@@ -16,11 +16,11 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        @Tag("browser")
+        ( @Tag("browser")
         void setBrowserName() {
             String browserName = System.getProperty("browser");
             Configuration.browser = browserName;
-        }
+        });
 
         Configuration.browserSize = "720x880";
         Configuration.baseUrl = "https://github.com/YuryFedoseev/HW_18_Les11_Allure";
