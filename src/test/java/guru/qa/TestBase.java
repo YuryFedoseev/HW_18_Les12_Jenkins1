@@ -3,21 +3,28 @@ package guru.qa;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import net.bytebuddy.build.Plugin;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
 public class TestBase {
 
+    @Test
+    @Tag("browser")
+    void setBrowserName() {
+        String browserName = System.getProperty("browser");
+        Configuration.browser = "chrome";
+    }
+
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "720x880";
         Configuration.baseUrl = "https://github.com/YuryFedoseev/HW_18_Les11_Allure";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-        Configuration.browser = System.setProperty("BrowserVersion","chrome");
+
+
         Configuration.browserVersion = "100.0";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

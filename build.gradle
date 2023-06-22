@@ -71,9 +71,11 @@ task city_test(type: Test) {
 
 task name_test(type: Test) {
     useJUnitPlatform {
-        includeTags("Name")
+        includeTags("browser","Name")
     }
 }
+
+
 
 
 
