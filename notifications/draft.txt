@@ -1,0 +1,21 @@
+name bot: @allert_bot_hw_18_les14
+username: hw_18_les14_Fedoseev_bot
+
+
+Use this token to access the HTTP API:
+6179186112:AAGnceyhl8re4pB0nCOO1ZyfpBLN8gdebaQ
+
+chat id":-1001807055852,
+
+https://api.telegram.org/bot6179186112:AAGnceyhl8re4pB0nCOO1ZyfpBLN8gdebaQ/getUpdates | jq .massage.chat.id
+
+curl https://api.telegram.org/bot6179186112:AAGnceyhl8re4pB0nCOO1ZyfpBLN8gdebaQ/getUpdates --ssl-no-revoke
+
+Send a message using the HTTP API:
+-X POST  -H 'Content-Type: application/json' -d '{"chat_id": "123456789", "text": "This is a test from curl", "disable_notification": true}' https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage
+
+curl -X POST  -H 'Content-Type: application/json' -d '{"chat_id": "-1001807055852", "text": "This is a test from qa.guru", "disable_notification": true}' https://api.telegram.org/bot6179186112:AAGnceyhl8re4pB0nCOO1ZyfpBLN8gdebaQ/sendMessage
+
+
+java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.2.1.jar
+
