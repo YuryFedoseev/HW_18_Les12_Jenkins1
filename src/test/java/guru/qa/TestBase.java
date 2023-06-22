@@ -17,7 +17,7 @@ public class TestBase {
         Configuration.browserSize = "720x880";
         Configuration.baseUrl = "https://github.com/YuryFedoseev/HW_18_Les11_Allure";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-        Configuration.browser = "chrome";
+        Configuration.browser = System.setProperty("BrowserVersion","chrome");
         Configuration.browserVersion = "100.0";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
