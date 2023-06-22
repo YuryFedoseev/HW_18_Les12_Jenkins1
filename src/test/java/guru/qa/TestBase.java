@@ -15,7 +15,7 @@ public class TestBase {
     @Tag("browser")
     void setBrowserName() {
         String browserName = System.getProperty("browser");
-        Configuration.browser = "chrome";
+        Configuration.browser = browserName;
     }
 
     @BeforeAll
