@@ -53,19 +53,19 @@ test {
 
 task hobby_test(type: Test) {
     useJUnitPlatform {
-        includeTags("Hobby")
+        includeTags("browser","browserVersion","Hobby")
     }
 }
 
 task gender_test(type: Test) {
     useJUnitPlatform {
-        includeTags("Gender")
+        includeTags("browser","browserVersion","Gender")
     }
 }
 
 task city_test(type: Test) {
     useJUnitPlatform {
-        includeTags("City")
+        includeTags("browser","browserVersion","City")
     }
 }
 
