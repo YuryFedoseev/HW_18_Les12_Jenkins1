@@ -22,13 +22,11 @@ public class TestBase {
 
         System.setProperty("browserVersion","98.0");
         String browserVersion = System.getProperty("browserVersion");
-        Configuration.browser = browserVersion;
+        Configuration.browserVersion = browserVersion;
 
         Configuration.browserSize = "720x880";
         Configuration.baseUrl = "https://github.com/YuryFedoseev/HW_18_Les11_Allure";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-
-        Configuration.browserVersion = "100.0";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:option", Map.<String, Object>of(
