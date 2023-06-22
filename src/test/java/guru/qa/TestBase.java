@@ -25,7 +25,7 @@ public class TestBase {
         Configuration.browserVersion = browserVersion;
 
         Configuration.browserSize = "720x880";
-        Configuration.baseUrl = "https://github.com/YuryFedoseev/HW_18_Les11_Allure";
+        Configuration.baseUrl = "https://demoqa.com";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

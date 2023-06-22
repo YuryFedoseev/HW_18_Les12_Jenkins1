@@ -22,7 +22,7 @@ public class RegistrationPage {
     private final SelenideElement submit = $("#submit");
 
     public RegistrationPage openPage() {
-        open("https://demoqa.com/automation-practice-form");
+        open("/automation-practice-form");
 
         return this;
     }
